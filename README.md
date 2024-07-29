@@ -23,7 +23,7 @@ FF-AndroidDevP4 is an Android application designed to display information about 
 
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/yourusername/FF-AndroidDevP4.git
+    git clone https://github.com/MuhammadWaleed-Animations/FF-AndroidDevP4.git
     ```
 2. **Open in Android Studio**:
     - Launch Android Studio.
