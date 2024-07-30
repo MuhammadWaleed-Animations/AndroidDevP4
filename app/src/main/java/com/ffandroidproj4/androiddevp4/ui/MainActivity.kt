@@ -1,4 +1,4 @@
-package com.ffandroidproj4.androiddevp4
+package com.ffandroidproj4.androiddevp4.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.ffandroidproj4.androiddevp4.adapter.CatRecyclerViewAdapter
+import com.ffandroidproj4.androiddevp4.MyApplication
+import com.ffandroidproj4.androiddevp4.R
 import com.ffandroidproj4.androiddevp4.model.CatModel
-import com.ffandroidproj4.androiddevp4.repository.CatRepository
+import com.ffandroidproj4.androiddevp4.preferences.PreferenceManager
 import com.ffandroidproj4.androiddevp4.repository.DogRepository
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var btn: androidx.appcompat.widget.AppCompatButton
     private var catList = ArrayList<CatModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,15 +26,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //var noIdea = MyApplication()
+        PreferenceManager.init(this)
         findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnNewActivity).setOnClickListener {
-            Intent(this,SecondActivity::class.java).also{
+            Intent(this, SecondActivity::class.java).also{
                 startActivity(it)
             }
         }
         findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnNewActivity).text = "Click me"
 
         //fetchCats()
-        fetchDogs()
+        //fetchDogs()
     }
 
 
