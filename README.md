@@ -1,15 +1,16 @@
 # FF-AndroidDevP4 Project
 
 ## Overview
-FF-AndroidDevP4 is an Android application designed to display information about cats and dogs using two fragments in a single activity. The app fetches data from [Free Test API](https://freetestapi.com) using Retrofit and displays it in a RecyclerView. Each fragment contains a button that navigates to a second activity, passing some dummy data.
+FF-AndroidDevP4 is an Android application designed to display information about Cats and Dogs using two fragments in a single activity. The app fetches data from Free Test API using Retrofit and displays it in a RecyclerView. Each fragment contains a button that navigates to a second activity, passing some dummy data. The app also utilizes Android's DataStore for persistent data storage.
 
 ## Features
-- **MainActivity with Two Fragments**: 
+- **MainActivity with Two Fragments**:
   - **Cat Fragment**: Displays a list of cats with their name, origin, and description.
   - **Dog Fragment**: Displays a list of dogs with similar details.
 - **Navigation**: Buttons in the fragments navigate to a secondary activity, passing dummy data.
 - **RecyclerView**: Displays lists of cats and dogs fetched from an external API.
-- **Data Fetching**: Uses Retrofit to fetch data from [Free Test API](https://freetestapi.com).
+- **Data Fetching**: Uses Retrofit to fetch data from Free Test API.
+- **Data Storage**: Utilizes Android's DataStore for storing and retrieving persistent data.
 - **Edge-to-Edge Support**: Ensures the UI extends to the edges of the screen for a modern look.
 
 ## Technologies Used
@@ -18,6 +19,15 @@ FF-AndroidDevP4 is an Android application designed to display information about 
 - **Retrofit**: HTTP client for making API requests.
 - **RecyclerView**: For displaying lists.
 - **ConstraintLayout**: For flexible and responsive UI design.
+- **DataStore**: For modern data storage solution.
+
+## DataStore Integration
+DataStore is used for modern and asynchronous data storage, replacing SharedPreferences. It allows you to store key-value pairs and typed objects efficiently.
+
+### Key Points
+- **DataStore Setup**: Includes adding necessary dependencies and configuring the DataStore in the project.
+- **Usage**: DataStore is integrated into the app to save and retrieve data asynchronously, ensuring a smooth and responsive user experience.
+
 
 ## How to Run the Project
 
@@ -34,7 +44,7 @@ FF-AndroidDevP4 is an Android application designed to display information about 
     - Android Studio should automatically sync the project. If not, click on `File > Sync Project with Gradle Files`.
 
 4. **Set Up API Dependencies**:
-    - Ensure you have the necessary dependencies in your `build.gradle` files. Retrofit, RecyclerView, and ConstraintLayout should already be included.
+    - Ensure you have the necessary dependencies in your `build.gradle` files. Retrofit, RecyclerView, ConstraintLayout, and DataStore should already be included.
 
 5. **Run the App**:
     - Connect your Android device or start an Android emulator.

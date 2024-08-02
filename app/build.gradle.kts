@@ -49,4 +49,17 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+    // for kotlin co-routines
+    implementation(libs.kotlinx.coroutines.android)
+    // for view model
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
+
+
+    //Preference Data store
+    implementation(libs.androidx.datastore.preferences.core)
+
+    implementation(libs.datastore.preferences)
+
 }

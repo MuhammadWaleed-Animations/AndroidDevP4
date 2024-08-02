@@ -1,10 +1,11 @@
-package com.ffandroidproj4.androiddevp4
+package com.ffandroidproj4.androiddevp4.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.ffandroidproj4.androiddevp4.R
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
