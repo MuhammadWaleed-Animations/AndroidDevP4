@@ -30,39 +30,36 @@ class MainActivity : AppCompatActivity() {
         //var noIdea = MyApplication()
         PreferenceManager.init(this)
         findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnNewActivity).setOnClickListener {
-            Intent(this, SecondActivity::class.java).also{
+            Intent(this, SecondActivity::class.java).also {
                 startActivity(it)
             }
         }
-        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnNewActivity).text = "Click me"
+        findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btnNewActivity).text =
+            "Click me"
 
         //fetchCats()
         //fetchDogs()
     }
 
 
-
-
-    private fun fetchDogs() {
-//        val itemRecyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.recyclerView)
-//        itemRecyclerView.layoutManager = LinearLayoutManager(this)
-
-        DogRepository.getDogs(
-            onResult = { students ->
-                students?.forEach { student ->
-                    Log.d("MainActivity", "Name: ${student.name}, Origin: ${student.origin}, Description: ${student.description}")
-                    //catList.add(CatModel(name = student.name, origin = student.origin, description = student.description))
-                }
-//                val catRecyclerViewAdapter = CatRecyclerViewAdapter(catList)
-//                itemRecyclerView.adapter = catRecyclerViewAdapter
-            },
-            onError = { error ->
-                Log.e("MainActivity", "Error: ${error.message}")
-            }
-        )
-    }
-}
-
+//    private fun fetchDogs() {
+//          val itemRecyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.recyclerView)
+//          itemRecyclerView.layoutManager = LinearLayoutManager(this)
+//
+//        DogRepository.getDogs(
+//            onResult = { students ->
+//                students?.forEach { student ->
+//                    Log.d("MainActivity", "Name: ${student.name}, Origin: ${student.origin}, Description: ${student.description}")
+//                    //catList.add(CatModel(name = student.name, origin = student.origin, description = student.description))
+//                }
+//                  val catRecyclerViewAdapter = CatRecyclerViewAdapter(catList)
+//                  itemRecyclerView.adapter = catRecyclerViewAdapter
+//            },
+//            onError = { error ->
+//                Log.e("MainActivity", "Error: ${error.message}")
+//            }
+//        )
+//    }
 
 
 //    private fun fetchCats() {
@@ -83,4 +80,4 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        )
 //    }
-
+}
